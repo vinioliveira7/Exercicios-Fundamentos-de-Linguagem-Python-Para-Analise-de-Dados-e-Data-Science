@@ -14,10 +14,10 @@ O curso é focado em introduzir os conceitos básicos da linguagem Python, com �
 - Matemática e manipulação de matrizes com `NumPy`
 - Manipulação de dados com `Pandas`
 - Visualização de dados com `Matplotlib` e `Seaborn`
-- Anáise de Dados com `Python` e `SQL`
+- Análise de dados com `Python` e `SQL`
 - Análise estatística com `Statsmodels`
 - Machine learning com `Scikit-Learn`
-- Análse de Séries Temporais em Python
+- Análise de Séries Temporais em Python
 - Introdução a Deep Learning com `TensorFlow`
 - Reinforcement Learning
 
