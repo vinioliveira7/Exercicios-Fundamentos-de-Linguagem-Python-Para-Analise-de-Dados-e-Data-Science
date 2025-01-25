@@ -7,7 +7,15 @@ def game():
 
     remaining_attempts = 6
     wrong_letters = []
-    word = choose_word(PATH)
+    try:    
+        word = choose_word(PATH)
+    except FileNotFoundError:
+        print("O arquivo das palavras não foi encontrado")
+        return
+    except ValueError:
+        print("O arquivo é inválido")
+        return
+
 
     print("\nBem-vindo(a) ao jogo da forca!")
     print("Adivinhe a palavra abaixo:\n")
@@ -47,9 +55,8 @@ def game():
 
 
 if __name__ == "__main__":
-    game()
-
-            
-
-            
-            
+    try:
+        game()
+    except KeyboardInterrupt:
+        clear_cmd()
+        print("\nUsuário forçou a interrupção")        
