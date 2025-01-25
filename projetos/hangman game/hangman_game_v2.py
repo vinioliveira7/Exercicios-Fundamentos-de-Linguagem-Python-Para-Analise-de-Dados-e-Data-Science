@@ -1,24 +1,28 @@
 import re
-from hangman_game_functions import choose_word, input_letter, clear_cmd, display_hangman
+from hangman_game_functions import choose_word, input_letter, clear_cmd, display_hangman, menu, choose_category
 PATH = "hangman game/words.json"
 
 def game():
     clear_cmd()
 
+    print("\nBem-vindo(a) ao jogo da forca!")
+
+    menu(PATH)
+
+    category = choose_category(PATH)
+
     remaining_attempts = 6
     wrong_letters = []
     try:    
-        word = choose_word(PATH)
+        word = choose_word(PATH, category)
     except FileNotFoundError:
         print("O arquivo das palavras não foi encontrado")
         return
     except ValueError:
         print("O arquivo é inválido")
         return
-
-
-    print("\nBem-vindo(a) ao jogo da forca!")
-    print("Adivinhe a palavra abaixo:\n")
+    
+    print("Adivinhe a palavra abaixo: ")
 
     print(display_hangman(remaining_attempts))
 

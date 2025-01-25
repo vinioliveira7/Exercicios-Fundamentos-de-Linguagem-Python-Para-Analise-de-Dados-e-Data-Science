@@ -7,7 +7,7 @@ def game():
 
     remaining_attempts = 6
     wrong_letters = []
-    word = choose_word(PATH)
+    word = choose_word(PATH, "frutas")
 
     print("\nBem-vindo(a) ao jogo da forca!")
     print("Adivinhe a palavra abaixo:\n")
