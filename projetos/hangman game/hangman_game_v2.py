@@ -1,5 +1,5 @@
 import re
-from hangman_game_functions import choose_word, input_letter, clear_cmd
+from hangman_game_functions import choose_word, input_letter, clear_cmd, display_hangman
 PATH = "hangman game/words.json"
 
 def game():
@@ -12,8 +12,10 @@ def game():
     print("\nBem-vindo(a) ao jogo da forca!")
     print("Adivinhe a palavra abaixo:\n")
 
-    discovered_letters = (["_" for letter in word])
-    print(" ".join(discovered_letters))
+    print(display_hangman(remaining_attempts))
+
+    discovered_letters = (['_' for letter in word])
+    print("Palavra: " + " ".join(discovered_letters)) 
 
 
     while remaining_attempts > 0:
@@ -31,8 +33,10 @@ def game():
         else:
             remaining_attempts -= 1
             wrong_letters.append(letter_attempt)
+  
+        print(display_hangman(remaining_attempts))
 
-        print(" ".join(discovered_letters))
+        print("Palavra: " + " ".join(discovered_letters)) 
 
         if "_" not in discovered_letters:
             print(f"\nVocê venceu! A palavra era: {word}")
