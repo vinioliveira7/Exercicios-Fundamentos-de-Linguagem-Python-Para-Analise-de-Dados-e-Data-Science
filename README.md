@@ -23,9 +23,10 @@ O curso é focado em introduzir os conceitos básicos da linguagem Python, com �
 
 ## 📂 Estrutura do Repositório
 
+- **/certificados_de_conclusao**: Certificados de conclusão obtidos ao longo do curso
 - **/exercicios**: Exercícios de cada capítulo do curso  
-- **/projetos**: Projetos feitos durante o curso  
-- **/certificado_de_conclusao**: Certificado de conclusão obtido ao final do curso
+- **/labs**: Laboratórios com pequenos projetos de alguns capítulos
+- **/projetos**: Projetos feitos durante o curso 
 
 ## 🚀 Objetivo
 
