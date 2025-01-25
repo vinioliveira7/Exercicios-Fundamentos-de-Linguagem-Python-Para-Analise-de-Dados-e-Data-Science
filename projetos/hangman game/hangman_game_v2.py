@@ -26,7 +26,7 @@ def game():
 
     print(display_hangman(remaining_attempts))
 
-    discovered_letters = (['_' for letter in word])
+    discovered_letters = (['_' if letter.isalpha() else letter for letter in word])
     print("Palavra: " + " ".join(discovered_letters)) 
 
 
